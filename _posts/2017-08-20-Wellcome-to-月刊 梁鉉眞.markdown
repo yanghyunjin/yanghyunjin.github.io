@@ -10,5 +10,5 @@ author: JJIN
 Monthly Project 월간 양현진
 
 <div style="text-align:center" markdown="1">
-![Karna]({{site.baseurl}}/images/prettymuch.JPG){: style="text-align:center"}
+![Karna]({{site.baseurl}}/images/prettymuch.jpg){: style="text-align:center"}
 </div>

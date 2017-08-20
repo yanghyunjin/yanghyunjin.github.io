@@ -2,7 +2,7 @@
 layout: post
 title:  Who is YangHyunJin?
 description: who is yanghyunjin. 
-img: hyunjin.JPG
+img: hyunjin.jpg
 color: 1976D2
 categories: jekyll update
 categories: [one, two]
