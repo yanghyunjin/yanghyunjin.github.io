@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "찌라시봇"
+description:  2017년 7월 / 월간 양현진 첫번째 프로젝트 찌라시를 익명으로 대신 전송해주는 챗봇
+date:   2017-08-21
+comments: true
+img: 찌라시.png
+color: f44336
+author: JJIN
+---
