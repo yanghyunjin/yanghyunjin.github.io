@@ -24,5 +24,6 @@ author: JJIN
 내가 하고 싶은 것을 해야 시간을 쪼개서라도 하지, 하기 싫은 일은 할 여유가 없다.
 
 <div style="text-align:center" markdown="1">
-![Karna]({{site.baseurl}}/images/prettymuch.jpg){: style="text-align:center"}
+![Karna]({{site.baseurl}}/images/prettymuch.jpg){: style="text-align:center"}<br>
+`우주에 흔적을 남기기 위한 넓고 얕은 개발`
 </div>
