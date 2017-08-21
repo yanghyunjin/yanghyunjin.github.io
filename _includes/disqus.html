@@ -1,4 +1,4 @@
-<div class="comment">
+<!--<div class="comment">
 <button class="show-comments"><i class="fa fa-comments" aria-hidden="true"> Load/Add comments</i></button>
 <div id="disqus_thread"></div>
 </div>
@@ -20,3 +20,15 @@ $(document).ready(function() {
 });
 
 </script>
+-->
+<div id="disqus_thread"></div>
+<script>
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://yanghyunjin.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
