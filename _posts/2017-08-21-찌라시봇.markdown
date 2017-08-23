@@ -74,7 +74,7 @@ bot.on('message', function onMessage(msg) {
 
 <div style="text-align:center" markdown="1">
 완성!!<br>
-![Karna]({{site.baseurl}}/images/chatbot완성.png)
+![Karna]({{site.baseurl}}/images/chatbotcomplete.png)
 </div>
 
 
