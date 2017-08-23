@@ -8,3 +8,73 @@ img: 찌라시.png
 color: f44336
 author: JJIN
 ---
+최근 많은 메신져나 sns를 통해 소위 찌라시라는 소문이 돌고 있다.
+
+누구나 받고 있고 또 남들과 공유하는데 재미를 느낀다.
+
+하지만 허위 사실 유포는 큰 범죄이기 때문에 ChatBot을 이용해 
+
+나를 숨기고 찌라시를 돌려 볼 수 있는 소프트웨어를 개발하기로 했다.
+
+![Karna]({{site.baseurl}}/images/챗봇아이디어.png)
+
+아이디어는 ChatBot에게 찌라시를 보내면 ChatBot은 익명 즉 누가 보낸지 모르게
+
+Bot이 단체방에 대신 찌라시를 전달해준다.
+
+1. 텔레그램(telegram)이 봇 만들기 가장 편해서 텔레그램을 이용하기로 했다.
+
+   봇 파더에게 봇을 만들어 달라고 하면 token을 얻을 수 있다.
+![Karna]({{site.baseurl}}/images/봇만들기.png)
+
+2. 봇이 돌 서버는 헤로쿠(heroku)를 사용하기로 했다.
+
+   헤로쿠(Heroku)는 웹 애플리케이션 배치 모델로 사용되는 여러 프로그래밍 언어를 지원하는 클라우드 PaaS이다.
+
+   최초의 클라우드 플랫폼들 가운데 하나인 헤로쿠는 2007년 6월 개발이 시작되었고 당시에는 루비 프로그래밍 언어만
+
+   지원하였으나 지금은 자바, Node.js, 스칼라, 클로저, 파이썬, PHP, 고를 지원한다고 한다. 가입 ㄱㄱ
+
+   나는 경험이 있고 편한 Node.js 를 사용하기로 했다.
+![Karna]({{site.baseurl}}/images/헤로쿠.png)
+
+3. 좋은 세상이라 github에 내가 생각한건 거의 누가 다 만들어 놨다.
+   
+   github에서 heroku-node-telegram-bot을 받는다.
+![Karna]({{site.baseurl}}/images/chatbotgithub1.png)
+
+   친절한 설명을 따라 heroku에 node 기반의 chatbot 서버를 올린다
+![Karna]({{site.baseurl}}/images/chatbotgithub2.png)
+
+4. 이제 10줄 정도 코딩 하면 끝이다.
+
+   bot.js 파일에 message 받으면 id를 출력하는 console.log를 이용해서 단체방의 id를 획득한다.
+
+   마지막으로 받은 메세지에 따라(text, image, video, document)를 위에서 얻은 단체방 id에 재전송하면 된다.
+![Karna]({{site.baseurl}}/images/botjs.png)
+
+{% highlight javascript %}
+bot.on('message', function onMessage(msg) {
+  var id =  //단체방 id
+  if(msg.document){
+    bot.sendDocument(id, msg.document.file_id);
+  }
+  else if(msg.photo){
+    bot.sendPhoto(id, msg.photo[0].file_id);
+  }
+  else if(msg.text){
+    bot.sendMessage(id, msg.text);
+  }
+  else if(msg.video){
+    bot.sendVideo(id, msg.video.file_id);
+  }
+});
+{% endhighlight %}
+
+
+<div style="text-align:center" markdown="1">
+완성!!<br>
+![Karna]({{site.baseurl}}/images/chatbot완성.png)
+</div>
+
+
