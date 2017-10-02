@@ -11,7 +11,7 @@ baseurl:
 sass:
     style: compressed
 
-  
+
 #optimization
 #compress.html
 compress_html:
@@ -42,3 +42,6 @@ include: [_pages]
 version: 0.8
 
 gems: [jekyll-paginate, jekyll-seo-tag]
+
+google-analytics:
+  id: "UA-107272919-1"
