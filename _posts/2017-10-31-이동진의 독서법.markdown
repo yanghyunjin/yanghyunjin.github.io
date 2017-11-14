@@ -4,7 +4,7 @@ title:  "월간 양현진 2017년 10월 4호(로또고2)"
 description: 세번째-2 프로젝트 / 성공적인 독서를 위한 도서 이동진 독서법 / 동서고금의 결정체 로또고2
 date:   2017-10-31
 comments: true
-img: 빨책.png
+img: 이동진빨책.jpg
 color: 212121
 author: JJIN
 ---
@@ -39,15 +39,16 @@ author: JJIN
 <div style="text-align:center" markdown="1">
 <h2>Ideation</h2>
 </div>
- - 멜론이나 벅스 스트리밍 결제금액이 너무 비싸서 라디오에서 나오는 노래들을 녹음해서 저장해두고 스트리밍해주는 AI
  - 라디오에 사연이나 문자 생성해서 보내고 당첨되면 선물 받아오는 AI
+ - 멜론이나 벅스 스트리밍 결제금액이 너무 비싸서 라디오에서 나오는 노래들을 녹음해서 저장해두고 스트리밍해주는 AI
+
 =======================================================================================
 <br>
 <div style="text-align:center" markdown="1">
 <h2>이동진 독서법</h2>
 </div>
 <div style="text-align:center" markdown="1">
-![Karna]({{site.baseurl}}/images/빨책.png)
+![Karna]({{site.baseurl}}/images/이동진빨책.jpg)
 </div>
 ‘닥치는 대로 끌리는 대로 오직 재미있게’
 
