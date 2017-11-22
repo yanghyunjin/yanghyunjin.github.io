@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "월간 양현진 2017년 9월 3호(로또고)"
+title:  "월간 양현진 2017년 9월 3호(로또고1)"
 description: 세번째 프로젝트 / 개츠비 읽기 실패로 인한 선정된 제프샌더스의 아침 5시의 기적 / 동서고금의 결정체 로또고
 date:   2017-09-04
 comments: true
-img: 제프센더스.png
+img: 나눔로또고.png
 color: 03A9F4
 author: JJIN
 ---
@@ -75,6 +75,15 @@ author: JJIN
 ![Karna]({{site.baseurl}}/images/아침5시.png)
 </div>
 
+[한줄요약]
+
+짧게 계획을 세우고 아침먹기 전 일찍 일어나서 하루를 지배하라.
+
+
+[인상깊은 문장]
+
+위대한 포부를 이루려면 고통을 받아들여야 할 뿐아니라, 마조히스트처럼 어느 정도는 고통을 즐겨야 한다.
+
 =======================================================================================
 <br>
 <div style="text-align:center" markdown="1">
@@ -82,3 +91,99 @@ author: JJIN
 </div>
 
 동양의 옛 사주명리학와 미국 Google사의 Tensorflow 머신러닝을 이용해 로또 번호를 예측해보고 부자 되자!!
+
+<div style="text-align:center" markdown="1">
+![Karna]({{site.baseurl}}/images/알파고.png)
+</div>
+
+알파고의 영향으로 인공지능은 대세가 되어버렸다.
+
+특히 알파고를 만든 구글의 딮러닝 오픈소스 Tensorflow는 정말 핫하다.
+
+과연 인공지능 머신러닝 딮러닝은 우리가 부귀영화를 누릴 수 있게 해줄 것인가에서 
+
+지금까지의 로또를 학습시키면 로또번호를 예측할 수 있지 않을까라는 생각이 들어서 개발해보기로 했다.
+
+<div style="text-align:center" markdown="1">
+![Karna]({{site.baseurl}}/images/나눔로또고.png)
+</div>
+
+- <h3>로또 데이터는 공식 홈페이지에가서 다운 받을 수 있다</h3>
+![Karna]({{site.baseurl}}/images/로또데이터다운.png)
+![Karna]({{site.baseurl}}/images/로또데이터엑셀.png)
+
+- <h3>학습 데이터 기준 설정하기</h3>
+   
+   매주 랜덤하게 추첨되는 로또번호 Data를 무슨 기준으로 학습시킬지 고민 중에
+
+   우리가 흔히 말하는 사주팔자를 이용하기로 했다 (재미로 하는 것이니 너무 진지하게 안 받아들였으면 합니다)
+
+   사주팔자는 8글자를 말하는데 년, 월, 일, 시를 육십갑자로 표현하여 운을 점치는 방식이다.
+
+   육십갑자[六十甲子] 는 10간과 12지로 표현된다.
+
+   10간은 갑(甲)·을(乙)·병(丙)·정(丁)·무(戊)·기(己)·경(庚)·신(辛)·임(壬)·계(癸)이고,
+
+   12지는 자(子)·축(丑)·인(寅)·묘(卯)·진(辰)·사(巳)·오(午)·미(未)·신(申)·유(酉)·술(戌)·해(亥)이다.
+
+   예를 들면
+
+   2017년  10 월  31 일  20 시는
+
+   정유 년 경술 월 신묘 일  무술 시 이다.
+
+   여기서 로또 추첨 시간은 동일하니까 빼고 년월일만으로 6글자를 뽑을 수 있게 되었다.
+
+   이런 느낌으로 각 데이터의 날짜를 모두 육십갑자에 해당하는 글자로 바꿨다.
+
+   {% highlight javascript %}
+      firstDate = date(2002,12,7)
+      firstganzi = [8,8,5]
+      firstzizi = [6,0,9]
+
+      ganzi = ["갑","을","병","정","무","기","경","신","임","계"]
+      zizi = ["자","축","인","묘","진","사","오","미","신","유","술","해"]
+   {% endhighlight %}
+
+[추첨일을 변경한 6글자]와 [로또번호 6숫자]를 텐서플로우에 학습시키고
+
+다음 추첨날짜를 입력하면 예상되는 값을 출력하는 로또고를 개발하기로 했다.
+
+- <h3>TensorFlow 설치</h3>
+
+   Tensorflow 설치에는 여러가지 방법이 있지만 빠르게 설치하고 개발하기 위해 Docker를 이용하기로 했다.
+
+   ![Karna]({{site.baseurl}}/images/docker.png)
+   Docker 홈페이지 가서 다운받는다
+
+   ![Karna]({{site.baseurl}}/images/도커설치.png)
+   Docker 설치
+
+   ![Karna]({{site.baseurl}}/images/도커설치완료.png)
+
+   Docker 설치 완료 및 실행 되었으면 정말 쉽다.
+
+   터미널을 실행하고 아래 명령어를 입력하면 된다.
+   {% highlight javascript %}
+   docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow{% endhighlight %}
+   
+
+<div style="text-align:center" markdown="1">
+![Karna]({{site.baseurl}}/images/텐서플로실행.png)
+</div>
+아래 url을 브라우저에 복붙 하면 텐서플로우를 사용할 수 있다 (토큰은 그때 그때 다를 것이다)
+
+Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=5d2c4925ed864e6ee26ca8233657caed4d2d252dafc60ad1
+
+- <h3>jupyter notebook</h3>
+
+   ![Karna]({{site.baseurl}}/images/텐서플로실행완료.png)
+
+   jupyter notebook은 오픈소스 웹 어플리케이션으로 python이나 R등 다양한 분석 언어를 이용하여 라이브 코드,
+
+   시각화 등을 지원하며 텍스트를 포함한 문서를 만들고 공유할 수 있다.
+
+jupyter notebook를 이용하여 python으로 학습만 시키면 되는데 다음 달에 이어서 진행하기로 했다...
+
