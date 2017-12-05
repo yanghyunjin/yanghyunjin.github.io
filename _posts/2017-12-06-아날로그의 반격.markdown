@@ -4,8 +4,8 @@ title:  "월간 양현진 2017년 11월 5호(Letter)"
 description: 다섯 번째 프로젝트 / 데이비드 색스의 아날로그의 반격 / 문자감성 SNS Letter
 date:   2017-12-06
 comments: true
-img: 노마드.jpg
-color: FF6F00
+img: 레코드판.jpg
+color: ff1744
 author: JJIN
 ---
 <br>
