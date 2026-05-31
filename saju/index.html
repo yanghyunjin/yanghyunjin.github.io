@@ -1,28 +1,188 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>사주 인연 풀이</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8f7ff;color:#111827}button,input{font:inherit}.screen{min-height:100vh}.input,.loading{display:flex;align-items:center;justify-content:center;padding:24px;background:linear-gradient(135deg,#0f0f1a,#1a0a2e 50%,#0f1a2e)}.wrap{width:100%;max-width:430px}.head{text-align:center;margin-bottom:26px;color:white}.head .icon{font-size:54px;margin-bottom:12px}.head h1{margin:0 0 6px;font-size:25px}.head h2{margin:0;color:#d8b4fe;font-size:20px}.head p{color:#9ca3af;font-size:13px}.card{background:white;border-radius:23px;padding:20px;box-shadow:0 8px 30px rgba(30,27,75,.08);margin-bottom:16px}.form{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(18px);border-radius:30px;padding:23px}.gender{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}.gender button{border:2px solid rgba(255,255,255,.14);background:transparent;color:#aaa;border-radius:15px;padding:13px;font-weight:900}.gender button.on{border-color:#c084fc;background:rgba(192,132,252,.23);color:white}.field{margin-bottom:14px}.field label{display:block;color:#d1d5db;font-size:13px;font-weight:700;margin-bottom:7px}.field input{width:100%;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);color:white;outline:none;border-radius:15px;padding:13px 15px;font-size:16px}.btn{width:100%;border:0;border-radius:17px;padding:16px;color:white;font-size:16px;font-weight:900;background:linear-gradient(135deg,#9333ea,#7c3aed);box-shadow:0 15px 35px rgba(124,58,237,.35)}.note{text-align:center;color:#6b7280;font-size:12px}.hidden{display:none!important}.spin{font-size:64px;animation:spin 1.5s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.loading{text-align:center;flex-direction:column}.loading h3{color:#d8b4fe;margin:16px 0 6px}.loading p{color:#9ca3af;margin:0}.hero{text-align:center;color:white;padding:42px 24px 34px;background:linear-gradient(135deg,#1a0a2e,#2d1b69);border-bottom-left-radius:30px;border-bottom-right-radius:30px}.hero p{margin:0 0 9px;color:#d8b4fe;font-size:13px;font-weight:800}.hero h1{margin:0;font-size:23px;line-height:1.42}.hero span{color:#f0abfc}.content{max-width:520px;margin:0 auto;padding:18px 16px 32px}.saju{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.pillar{text-align:center}.pillabel{color:#9ca3af;font-size:12px;font-weight:900;margin-bottom:5px}.box{width:66px;height:58px;margin:0 auto 5px;border-radius:15px;border:1px solid;display:flex;flex-direction:column;align-items:center;justify-content:center}.box b{font-size:20px}.box small{font-weight:900}.wood{background:#dcfce7;color:#166534;border-color:#86efac}.fire{background:#fee2e2;color:#b91c1c;border-color:#fca5a5}.earth{background:#fef9c3;color:#92400e;border-color:#fde68a}.metal{background:#f1f5f9;color:#334155;border-color:#cbd5e1}.water{background:#dbeafe;color:#1d4ed8;border-color:#93c5fd}.type{background:linear-gradient(135deg,#faf5ff,#f3e8ff);border:1px solid #e9d5ff}.eyebrow{margin:0 0 5px;color:#9333ea;font-size:12px;font-weight:900}.type h2{margin:0 0 6px;color:#581c87}.keyword{margin:0 0 10px;color:#7c3aed;font-size:13px;font-weight:900}.desc,.txt{color:#4b5563;font-size:14px;line-height:1.72}.section{display:flex;gap:10px;align-items:center;margin-bottom:16px}.num{width:30px;height:30px;border-radius:50%;color:white;display:grid;place-items:center;font-weight:900}.pinkbg{background:#ec4899}.purplebg{background:#7c3aed}.greenbg{background:#059669}.bluebg{background:#2563eb}.section p{margin:0;color:#9ca3af;font-size:11px;font-weight:800}.section h3{margin:1px 0 0;font-size:16px}.bubble{border-radius:16px;padding:15px;margin-bottom:14px}.bubble p{margin:0;font-size:14px;line-height:1.68}.pink{background:#fff0f6;color:#be185d}.green{background:#f0fdf4;color:#15803d}.orange{background:#fff7ed;color:#7c2d12}.purple{background:#f5f3ff;color:#4c1d95}.blue{background:#eff6ff;color:#1d4ed8}.profile{background:#f8f7ff;border-radius:18px;padding:16px}.row{border-bottom:1px solid #e5e7eb;padding-bottom:9px;margin-bottom:9px}.row:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}.label{display:block;color:#9333ea;font-size:14px;font-weight:900;margin-bottom:4px}.value{font-size:14px;font-weight:800}.clean{margin:6px 0 0;padding:0;list-style:none;color:#374151;font-size:13px;line-height:1.7}.scores{display:grid;gap:10px}.score{display:grid;grid-template-columns:78px 1fr 28px;gap:8px;align-items:center}.bar{height:11px;background:#ede9fe;border-radius:99px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#a855f7,#ec4899)}.minirow{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini{border-radius:15px;padding:14px}.mini p:first-child{margin:0 0 6px;font-size:12px;font-weight:900}.mini p:last-child{margin:0;color:#374151;font-size:13px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{background:#ede9fe;color:#5b21b6;border-radius:99px;padding:5px 12px;font-size:13px;font-weight:900}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#111827;color:white;border-radius:99px;padding:12px 15px;font-size:13px;font-weight:900;opacity:0;transition:.2s;white-space:nowrap}.toast.show{opacity:1;transform:translateX(-50%) translateY(-4px)}@media(max-width:380px){.box{width:58px;height:54px}.score{grid-template-columns:70px 1fr 24px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>사주 인연 풀이</title>
+  <style>
+    *{box-sizing:border-box} body{margin:0;background:#f8f7ff;color:#111827;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif}
+    button,input{font:inherit} button{cursor:pointer}
+    .hidden{display:none!important}.screen{min-height:100vh}
+    .input,.loading{display:flex;align-items:center;justify-content:center;padding:24px;background:linear-gradient(135deg,#0f0f1a,#1a0a2e 55%,#0f1a2e)}
+    .wrap{width:100%;max-width:430px}.head{text-align:center;color:#fff;margin-bottom:28px}.head .icon{font-size:54px}.head h1{margin:12px 0 4px;font-size:25px}.head h2{margin:0;color:#d8b4fe;font-size:20px}.head p{color:#9ca3af;font-size:13px}
+    .form{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:28px;padding:22px;box-shadow:0 20px 70px rgba(0,0,0,.25)}
+    .gender{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}.gender button{border:2px solid rgba(255,255,255,.15);background:transparent;color:#aaa;border-radius:15px;padding:13px;font-weight:900}.gender button.on{border-color:#c084fc;background:rgba(192,132,252,.23);color:#fff}
+    .field{margin-bottom:14px}.field label{display:block;color:#d1d5db;font-size:13px;font-weight:800;margin-bottom:7px}.field input{width:100%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.09);color:#fff;border-radius:15px;padding:13px 15px;outline:0;font-size:16px}.field input::placeholder{color:#6b7280}
+    .btn{width:100%;border:0;border-radius:17px;padding:16px;background:linear-gradient(135deg,#9333ea,#7c3aed);color:#fff;font-size:16px;font-weight:900;box-shadow:0 15px 35px rgba(124,58,237,.35)}
+    .note{text-align:center;color:#6b7280;font-size:12px;margin-top:14px}.err{margin-top:12px;padding:12px;border-radius:14px;background:rgba(127,29,29,.45);color:#fecaca;font-size:13px}
+    .loading{flex-direction:column;text-align:center}.spin{font-size:64px;animation:spin 1.5s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.loading h3{color:#d8b4fe;margin:16px 0 6px}.loading p{color:#9ca3af;margin:0}
+    .hero{text-align:center;color:#fff;padding:42px 24px 34px;background:linear-gradient(135deg,#1a0a2e,#2d1b69);border-bottom-left-radius:30px;border-bottom-right-radius:30px}.hero p{margin:0 0 9px;color:#d8b4fe;font-size:13px;font-weight:800}.hero h1{margin:0;font-size:23px;line-height:1.42}.hero span{color:#f0abfc}
+    .content{max-width:520px;margin:0 auto;padding:18px 16px 32px}.card{background:#fff;border-radius:23px;padding:20px;margin-bottom:16px;box-shadow:0 8px 30px rgba(30,27,75,.08)}.card h3{margin:0 0 16px;font-size:16px}
+    .saju{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.pillar{text-align:center}.pillabel{color:#9ca3af;font-size:12px;font-weight:900;margin-bottom:5px}.box{width:66px;height:58px;margin:0 auto 5px;border-radius:15px;border:1px solid;display:flex;flex-direction:column;align-items:center;justify-content:center}.box b{font-size:20px}.box small{font-weight:900}
+    .wood{background:#dcfce7;color:#166534;border-color:#86efac}.fire{background:#fee2e2;color:#b91c1c;border-color:#fca5a5}.earth{background:#fef9c3;color:#92400e;border-color:#fde68a}.metal{background:#f1f5f9;color:#334155;border-color:#cbd5e1}.water{background:#dbeafe;color:#1d4ed8;border-color:#93c5fd}
+    .type{background:linear-gradient(135deg,#faf5ff,#f3e8ff);border:1px solid #e9d5ff}.eyebrow{margin:0 0 5px;color:#9333ea;font-size:12px;font-weight:900}.type h2{margin:0 0 6px;color:#581c87}.keyword{margin:0 0 10px;color:#7c3aed;font-size:13px;font-weight:900}.txt,.desc{font-size:14px;line-height:1.72;color:#4b5563}
+    .section{display:flex;gap:10px;align-items:center;margin-bottom:16px}.num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:white;font-weight:900}.pinkbg{background:#ec4899}.purplebg{background:#7c3aed}.greenbg{background:#059669}.bluebg{background:#2563eb}.section p{margin:0;color:#9ca3af;font-size:11px;font-weight:800}.section h3{margin:1px 0 0;font-size:16px}
+    .bubble{border-radius:16px;padding:15px;margin-bottom:14px}.bubble p,.bubble ul{margin:0;font-size:14px;line-height:1.68}.pink{background:#fff0f6;color:#be185d}.green{background:#f0fdf4;color:#15803d}.orange{background:#fff7ed;color:#7c2d12}.purple{background:#f5f3ff;color:#4c1d95}.blue{background:#eff6ff;color:#1d4ed8}
+    .profile{background:#f8f7ff;border-radius:18px;padding:16px}.row{border-bottom:1px solid #e5e7eb;padding-bottom:9px;margin-bottom:9px}.row:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}.label{display:block;color:#9333ea;font-size:14px;font-weight:900;margin-bottom:4px}.value{font-size:14px;font-weight:800}.clean{padding-left:0;list-style:none}
+    .scores{display:grid;gap:10px}.score{display:grid;grid-template-columns:78px 1fr 28px;gap:8px;align-items:center}.bar{height:11px;background:#ede9fe;border-radius:99px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#a855f7,#ec4899)}
+    .minirow{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini{border-radius:15px;padding:14px}.mini p:first-child{margin:0 0 6px;font-size:12px;font-weight:900}.mini p:last-child{margin:0;color:#374151;font-size:13px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{background:#ede9fe;color:#5b21b6;border-radius:99px;padding:5px 12px;font-size:13px;font-weight:900}
+    @media(max-width:380px){.box{width:58px;height:54px}.score{grid-template-columns:70px 1fr 24px}.content{padding-left:12px;padding-right:12px}}
+  </style>
 </head>
 <body>
-<main id="input" class="screen input"><div class="wrap"><section class="head"><div class="icon">🔮</div><h1>내 팔자에 새겨진</h1><h2>배우자 & 인연 미리보기</h2><p>생년월일시를 넣으면 바로 사주풀이가 열립니다</p></section><section class="form"><div class="gender"><button id="female" class="on" onclick="setGender('여')">여성</button><button id="male" onclick="setGender('남')">남성</button></div><div class="field"><label>출생연도</label><input id="year" type="number" min="1920" max="2026" placeholder="예) 1990"></div><div class="field"><label>출생월</label><input id="month" type="number" min="1" max="12" placeholder="예) 7"></div><div class="field"><label>출생일</label><input id="day" type="number" min="1" max="31" placeholder="예) 15"></div><div class="field"><label>태어난 시각 (24시간제)</label><input id="hour" type="number" min="0" max="23" placeholder="예) 14"></div><button class="btn" onclick="analyze()">사주 풀이 시작</button></section><p class="note">* 재미로 보는 간단 사주풀이입니다</p></div></main>
-<main id="loading" class="screen loading hidden"><div class="spin">🔮</div><h3>사주풀이 생성 중...</h3><p>일간, 오행, 인연운을 읽고 있어요</p></main>
-<main id="result" class="screen hidden"><section class="hero"><p id="meta"></p><h1>내 팔자에 새겨진<br><span>연애상대 & 결혼상대</span> 풀이</h1></section><section class="content"><article class="card"><h3>나의 사주팔자</h3><div id="saju" class="saju"></div></article><article class="card type"><p class="eyebrow">나의 일간 유형</p><h2 id="ilgan"></h2><p id="keyword" class="keyword"></p><p id="desc" class="desc"></p><div style="margin-top:13px;padding-top:13px;border-top:1px solid #e9d5ff"><p id="love" class="txt"></p></div></article><article class="card"><h3>오행 밸런스</h3><div id="scores" class="scores"></div><div class="bubble blue" style="margin-top:14px;margin-bottom:0"><b>오행 해석</b><p id="elementReading"></p></div></article><article class="card"><div class="section"><div class="num pinkbg">1</div><div><p>운명의 연애상대</p><h3>내 사랑의 레벨을 확 올려줄 상대는?</h3></div></div><div class="bubble pink"><p id="partner"></p></div><div class="profile"><p><b>연애 상대 프로필</b></p><div class="row"><span class="label">MBTI</span><span id="mbti" class="value"></span></div><div class="row"><span class="label">나이 차이</span><span id="age" class="value"></span></div><div class="row"><span class="label">알아보는 법</span><ul id="traits" class="clean"></ul></div></div><div class="bubble orange" style="margin-top:14px;margin-bottom:0"><b>피하면 좋은 상대</b><ul id="avoid" class="clean"></ul></div></article><article class="card"><div class="section"><div class="num purplebg">2</div><div><p>운명의 결혼상대</p><h3>내 결혼 시기와 타고난 배우자복은?</h3></div></div><div class="bubble purple"><p style="font-size:12px;color:#7c3aed;font-weight:900;margin-bottom:4px">결혼수 들어오는 시기</p><p id="range" style="font-size:20px;font-weight:900;margin:0"></p><p id="rlabel" style="font-size:13px;font-weight:900;margin:2px 0 7px;color:#6d28d9"></p><p id="rdesc" class="desc"></p></div><div class="bubble green"><b>내 타고난 결혼운</b><p id="marriage"></p></div><div class="profile"><p><b>결혼 상대 프로필</b></p><div class="row"><span class="label">MBTI</span><span id="mmbti" class="value"></span></div><div class="row"><span class="label">만나는 계절</span><span id="season" class="value"></span></div><div class="row"><span class="label">이런 사람이야</span><ul id="mtraits" class="clean"></ul></div></div><div class="bubble orange" style="margin-top:14px;margin-bottom:0"><b>결혼 생활 주의사항</b><p id="warning"></p></div></article><article class="card"><div class="section"><div class="num greenbg">3</div><div><p>소중한 인연</p><h3>놓치지 않는 법</h3></div></div><div class="bubble green"><b>나만의 만남 팁</b><p id="tip"></p></div><div class="minirow"><div class="mini pink"><p>행운의 장소</p><p id="place"></p></div><div class="mini blue"><p>행운의 날</p><p id="lucky"></p></div></div><div class="bubble purple" style="margin-top:12px;margin-bottom:0"><b>나와 같은 일간인 유명인</b><div id="celeb" class="chips"></div></div></article><article class="card"><div class="section"><div class="num bluebg">4</div><div><p>종합 풀이</p><h3>오늘의 결론</h3></div></div><div class="bubble blue" style="margin-bottom:0"><p id="summary"></p></div></article><section class="card note">이 사주풀이는 입력값 기반 간단 분석입니다. 실제 명리학 해석과 차이가 있을 수 있으니 재미로 참고해주세요.</section><button class="btn" onclick="reset()">다시 분석하기</button></section></main><div id="toast" class="toast"></div>
+  <main id="inputScreen" class="screen input">
+    <div class="wrap">
+      <section class="head">
+        <div class="icon">🔮</div>
+        <h1>내 팔자에 새겨진</h1>
+        <h2>배우자 & 인연 미리보기</h2>
+        <p>생년월일시를 넣으면 바로 사주풀이가 열립니다</p>
+      </section>
+      <section class="form">
+        <div class="gender">
+          <button id="btnFemale" class="on" type="button">여성</button>
+          <button id="btnMale" type="button">남성</button>
+        </div>
+        <div class="field"><label>출생연도</label><input id="yearInput" type="number" min="1920" max="2026" placeholder="예) 1990"></div>
+        <div class="field"><label>출생월</label><input id="monthInput" type="number" min="1" max="12" placeholder="예) 7"></div>
+        <div class="field"><label>출생일</label><input id="dayInput" type="number" min="1" max="31" placeholder="예) 15"></div>
+        <div class="field"><label>태어난 시각 (24시간제)</label><input id="hourInput" type="number" min="0" max="23" placeholder="예) 14"></div>
+        <button id="analyzeBtn" class="btn" type="button">사주 풀이 시작</button>
+        <div id="errorBox" class="err hidden"></div>
+      </section>
+      <p class="note">* 재미로 보는 간단 사주풀이입니다</p>
+    </div>
+  </main>
+
+  <main id="loadingScreen" class="screen loading hidden">
+    <div class="spin">🔮</div>
+    <h3>사주풀이 생성 중...</h3>
+    <p>일간, 오행, 인연운을 읽고 있어요</p>
+  </main>
+
+  <main id="resultScreen" class="screen hidden">
+    <section class="hero">
+      <p id="meta"></p>
+      <h1>내 팔자에 새겨진<br><span>연애상대 & 결혼상대</span> 풀이</h1>
+    </section>
+    <section class="content">
+      <article class="card"><h3>나의 사주팔자</h3><div id="sajuGrid" class="saju"></div></article>
+      <article class="card type"><p class="eyebrow">나의 일간 유형</p><h2 id="ilganName"></h2><p id="ilganKeyword" class="keyword"></p><p id="ilganDesc" class="desc"></p><div style="margin-top:13px;padding-top:13px;border-top:1px solid #e9d5ff"><p id="loveReading" class="txt"></p></div></article>
+      <article class="card"><h3>오행 밸런스</h3><div id="scoreGrid" class="scores"></div><div class="bubble blue" style="margin-top:14px;margin-bottom:0"><b>오행 해석</b><p id="elementReading"></p></div></article>
+      <article class="card"><div class="section"><div class="num pinkbg">1</div><div><p>운명의 연애상대</p><h3>내 사랑의 레벨을 확 올려줄 상대는?</h3></div></div><div class="bubble pink"><p id="partnerReading"></p></div><div class="profile"><p><b>연애 상대 프로필</b></p><div class="row"><span class="label">MBTI</span><span id="mbti" class="value"></span></div><div class="row"><span class="label">나이 차이</span><span id="age" class="value"></span></div><div class="row"><span class="label">알아보는 법</span><ul id="traits" class="clean"></ul></div></div><div class="bubble orange" style="margin-top:14px;margin-bottom:0"><b>피하면 좋은 상대</b><ul id="avoid" class="clean"></ul></div></article>
+      <article class="card"><div class="section"><div class="num purplebg">2</div><div><p>운명의 결혼상대</p><h3>내 결혼 시기와 타고난 배우자복은?</h3></div></div><div class="bubble purple"><p style="font-size:12px;color:#7c3aed;font-weight:900;margin-bottom:4px">결혼수 들어오는 시기</p><p id="timingRange" style="font-size:20px;font-weight:900;margin:0"></p><p id="timingLabel" style="font-size:13px;font-weight:900;margin:2px 0 7px;color:#6d28d9"></p><p id="timingDesc" class="desc"></p></div><div class="bubble green"><b>내 타고난 결혼운</b><p id="marriageReading"></p></div><div class="profile"><p><b>결혼 상대 프로필</b></p><div class="row"><span class="label">MBTI</span><span id="marriageMbti" class="value"></span></div><div class="row"><span class="label">만나는 계절</span><span id="season" class="value"></span></div><div class="row"><span class="label">이런 사람이야</span><ul id="marriageTraits" class="clean"></ul></div></div><div class="bubble orange" style="margin-top:14px;margin-bottom:0"><b>결혼 생활 주의사항</b><p id="warningReading"></p></div></article>
+      <article class="card"><div class="section"><div class="num greenbg">3</div><div><p>소중한 인연</p><h3>놓치지 않는 법</h3></div></div><div class="bubble green"><b>나만의 만남 팁</b><p id="tipReading"></p></div><div class="minirow"><div class="mini pink"><p>행운의 장소</p><p id="luckyPlace"></p></div><div class="mini blue"><p>행운의 날</p><p id="luckyDay"></p></div></div><div class="bubble purple" style="margin-top:12px;margin-bottom:0"><b>나와 같은 일간인 유명인</b><div id="celeb" class="chips"></div></div></article>
+      <article class="card"><div class="section"><div class="num bluebg">4</div><div><p>종합 풀이</p><h3>오늘의 결론</h3></div></div><div class="bubble blue" style="margin-bottom:0"><p id="summaryReading"></p></div></article>
+      <section class="card note">이 사주풀이는 입력값 기반 간단 분석입니다. 실제 명리학 해석과 차이가 있을 수 있으니 재미로 참고해주세요.</section>
+      <button id="resetBtn" class="btn" type="button">다시 분석하기</button>
+    </section>
+  </main>
+
 <script>
-const HS=['갑(甲)','을(乙)','병(丙)','정(丁)','무(戊)','기(己)','경(庚)','신(辛)','임(壬)','계(癸)'];
-const EB=['자(子)','축(丑)','인(寅)','묘(卯)','진(辰)','사(巳)','오(午)','미(未)','신(申)','유(酉)','술(戌)','해(亥)'];
-const SE=['목','목','화','화','토','토','금','금','수','수'];
-const BE=['수','토','목','목','토','화','화','토','금','금','토','수'];
-const EC={목:'wood',화:'fire',토:'earth',금:'metal',수:'water'};
-const EN={목:'성장과 추진력',화:'표현과 열정',토:'안정과 책임',금:'원칙과 결단',수:'지혜와 감성'};
-const IL={0:['갑목일간','리더십 + 성장 + 도전','곧은 나무처럼 하늘을 향해 자라는 기운. 리더십이 강하고 개척 정신이 뛰어나며, 한번 정한 목표는 끝까지 밀어붙이는 타입.'],1:['을목일간','유연함 + 감성 + 인내','풀과 꽃처럼 유연하게 적응하는 기운. 감수성이 풍부하고 섬세하며, 어떤 환경에서도 살아남는 강인한 내면을 지님.'],2:['병화일간','열정 + 카리스마 + 빛남','태양처럼 환하게 빛나는 기운. 존재 자체로 주변을 밝히고, 자신감과 추진력이 넘치며 사람들의 시선을 자연스레 끌어당기는 타입.'],3:['정화일간','따뜻함 + 직관 + 헌신','촛불처럼 은은하게 빛나는 기운. 따뜻한 마음으로 주변을 감싸며, 예리한 직관력과 깊은 감성으로 사람의 마음을 잘 읽음.'],4:['무토일간','믿음직함 + 안정감 + 든든한 중심축','양의 흙, 웅장한 산 같은 기운. 겉으로는 묵직하고 조용하지만, 속엔 끈기와 책임감, 인내심이 단단히 자리 잡은 타입.'],5:['기토일간','포용력 + 실용성 + 세심함','논밭의 흙처럼 만물을 품는 기운. 포용력이 넓고 실용적이며, 세심한 배려로 주변 사람들을 편안하게 해주는 타입.'],6:['경금일간','강인함 + 원칙 + 카리스마','단단한 쇠처럼 흔들리지 않는 기운. 원칙을 중시하고 결단력이 강하며, 한번 마음먹으면 끝까지 해내는 의지가 대단한 타입.'],7:['신금일간','완벽주의 + 세련됨 + 예리함','보석처럼 빛나고 날카로운 기운. 미적 감각이 뛰어나고 완벽주의 성향이 있으며, 섬세하고 예리한 분석력을 지님.'],8:['임수일간','지혜 + 자유로움 + 깊은 통찰','바다처럼 깊고 넓은 기운. 지혜롭고 자유분방하며, 유연한 사고로 어떤 상황에서도 해법을 찾아내는 능력이 있음.'],9:['계수일간','감성 + 섬세함 + 지적 탐구','이슬비처럼 은은하고 섬세한 기운. 감성이 풍부하고 지적 호기심이 강하며, 깊이 생각하고 신중하게 행동하는 타입.']};
-const SP={0:{mbti:'ENTJ / ISFP',age:'-3 ~ +2',season:'가을~겨울',traits:['목표 지향적이고 실행력 강한 사람','조용하지만 내면이 깊은 사람','예술적 감각이나 손재주 있는 사람'],avoid:['우유부단하고 결정 못 하는 사람','지나치게 의존적인 사람'],celebrity:['공유','현빈'],place:'야외 활동 장소, 스포츠 관련 공간',day:'금요일, 토요일'},1:{mbti:'INFJ / ESTJ',age:'+1 ~ +5',season:'봄~여름',traits:['안정적이고 믿음직한 사람','지적이고 계획적인 사람','가정적이고 책임감 강한 사람'],avoid:['변덕스럽고 충동적인 사람','허세 부리는 사람'],celebrity:['이준기','김수현'],place:'도서관, 카페, 문화공간',day:'화요일, 목요일'},2:{mbti:'INFP / ENFJ',age:'-5 ~ +1',season:'봄',traits:['감성적이고 따뜻한 사람','창의적이고 예술적인 사람','나를 이해하고 지지해주는 사람'],avoid:['냉정하고 계산적인 사람','권위적인 사람'],celebrity:['정해인','박보검'],place:'공원, 갤러리, 감성 카페',day:'일요일, 수요일'},3:{mbti:'ISTP / ENTP',age:'-2 ~ +4',season:'여름',traits:['실용적이고 행동력 있는 사람','유머 감각 있는 사람','나를 편안하게 해주는 사람'],avoid:['감정 표현 전혀 없는 사람','무책임한 사람'],celebrity:['송중기','이도현'],place:'활기찬 시장, 야외 공간',day:'월요일, 금요일'},4:{mbti:'ISTJ / ESTP',age:'-1 ~ +3',season:'가을',traits:['돈·일·현실 문제에 강한 현실 밀착형','웬만한 일엔 동요 없이 지켜주는 보호자 같은 사람','말보다 행동으로 표현하는 실천형'],avoid:['산만하고 중심 없는 사람','감정 기복 심한 사람'],celebrity:['최지우','김혜수','박보영'],place:'고급 레스토랑, 자연 속 조용한 공간',day:'토요일, 화요일'},5:{mbti:'ENFP / ISFJ',age:'0 ~ +4',season:'봄~가을',traits:['유쾌하고 에너지 넘치는 사람','세심하고 배려심 깊은 사람','성실하게 가정을 꾸려나가는 사람'],avoid:['이기적이고 배려 없는 사람','거짓말 잘 하는 사람'],celebrity:['아이유','신민아'],place:'따뜻한 분위기 카페, 가정적인 공간',day:'수요일, 일요일'},6:{mbti:'INTJ / ESFP',age:'-3 ~ +1',season:'겨울',traits:['지적이고 원칙 있는 사람','활발하고 사교적인 사람','인생 목표가 뚜렷한 사람'],avoid:['무원칙하고 게으른 사람','지나치게 감정적인 사람'],celebrity:['김태리','전지현'],place:'세련된 도심, 고급 공간',day:'목요일, 토요일'},7:{mbti:'INFJ / ESFJ',age:'+2 ~ +5',season:'여름',traits:['감각적이고 미적 안목 있는 사람','따뜻하고 사교적인 사람','나의 완벽주의를 이해해주는 사람'],avoid:['지저분하고 무신경한 사람','자기 관리 안 하는 사람'],celebrity:['손예진','유인나'],place:'갤러리, 세련된 공간',day:'금요일, 화요일'},8:{mbti:'ENFP / INTJ',age:'-4 ~ +2',season:'봄~여름',traits:['자유롭고 개방적인 사람','지적이고 깊이 있는 대화 가능한 사람','나의 독립성을 존중해주는 사람'],avoid:['통제하려는 사람','좁은 시야를 가진 사람'],celebrity:['강하늘','박서준'],place:'여행지, 바다, 카페',day:'월요일, 목요일'},9:{mbti:'ENFJ / INTP',age:'+1 ~ +3',season:'겨울~봄',traits:['감성적이고 지적인 사람','나를 깊이 이해해주는 사람','함께 성장할 수 있는 사람'],avoid:['감수성 없는 사람','표면적인 관계만 원하는 사람'],celebrity:['류준열','최우식'],place:'서점, 조용한 카페, 미술관',day:'수요일, 금요일'}};
-const MT=[['24~27세','이른 결혼운','20대 중반에 인연이 찾아오는 운. 젊은 나이에 운명적 만남이 올 수 있어.'],['28~31세','황금 결혼운','사회적으로 자리 잡으면서 자연스럽게 인연도 찾아오는 최적의 시기.'],['32~35세','성숙한 결혼운','스스로 성장한 후 진짜 맞는 사람을 만나는 타입. 서두르지 않아도 돼.'],['36세 이후','늦지만 확실한 결혼운','늦게 오는 인연이 더 깊고 오래가. 기다린 만큼 값진 만남이 찾아와.']];
-let gender='여';function setGender(g){gender=g;female.classList.toggle('on',g==='여');male.classList.toggle('on',g==='남')}function mod(n,m){return((n%m)+m)%m}function stem(y){return mod(y-4,10)}function branch(y){return mod(y-4,12)}function mstem(ys,m){return mod([0,2,4,6,8,0,2,4,6,8][ys%10]+m-1,10)}function mbranch(m){return mod(m+1,12)}function dayn(y,m,d){return Math.floor(new Date(y,m-1,d,12).getTime()/86400000)+25568}function dstem(y,m,d){return mod(dayn(y,m,d),10)}function dbranch(y,m,d){return mod(dayn(y,m,d),12)}function hbranch(h){return mod(Math.floor((h+1)/2),12)}function hstem(ds,h){return mod((ds%5)*2+hbranch(h),10)}function valid(y,m,d){let x=new Date(y,m-1,d);return x.getFullYear()==y&&x.getMonth()==m-1&&x.getDate()==d}function toast(t){let e=document.getElementById('toast');e.textContent=t;e.classList.add('show');clearTimeout(window.tt);window.tt=setTimeout(()=>e.classList.remove('show'),1800)}function show(id){['input','loading','result'].forEach(x=>document.getElementById(x).classList.add('hidden'));document.getElementById(id).classList.remove('hidden');scrollTo(0,0)}function pillar(si,bi,l){let se=SE[si],be=BE[bi];return `<div class="pillar"><div class="pillabel">${l}</div><div class="box ${EC[se]}"><b>${HS[si][0]}</b><small>${se}</small></div><div class="box ${EC[be]}"><b>${EB[bi][0]}</b><small>${be}</small></div></div>`}function li(a,p){return a.map(x=>`<li>${p} ${x}</li>`).join('')}function chips(a){return a.map(x=>`<span class="chip">${x}</span>`).join('')}function scores(c){return Object.entries(c).map(([e,n])=>`<div class="score"><div style="font-size:12px;font-weight:900;color:#4b5563">${e}</div><div class="bar"><div class="fill" style="width:${Math.min(100,18+n*18)}%"></div></div><div style="font-size:12px;font-weight:900;color:#7c3aed;text-align:right">${n}</div></div>`).join('')}function analyze(){let y=+year.value,m=+month.value,d=+day.value,h=+hour.value;if(!y||!m||!d||hour.value==='')return toast('생년월일과 태어난 시간을 입력해주세요');if(y<1920||y>2026)return toast('출생연도는 1920~2026 사이로 입력해주세요');if(m<1||m>12)return toast('출생월은 1~12 사이로 입력해주세요');if(h<0||h>23)return toast('태어난 시각은 0~23 사이로 입력해주세요');if(!valid(y,m,d))return toast('존재하지 않는 날짜입니다');show('loading');setTimeout(()=>{let ys=stem(y),yb=branch(y),ms=mstem(ys,m),mb=mbranch(m),ds=dstem(y,m,d),db=dbranch(y,m,d),hs=hstem(ds,h),hb=hbranch(h);let counts={목:0,화:0,토:0,금:0,수:0};[ys,ms,ds,hs].forEach(i=>counts[SE[i]]++);[yb,mb,db,hb].forEach(i=>counts[BE[i]]++);let mx=Math.max(...Object.values(counts)),mn=Math.min(...Object.values(counts));let dom=Object.keys(counts).find(k=>counts[k]==mx),weak=Object.keys(counts).find(k=>counts[k]==mn);let il=IL[ds],sp=SP[ds],mt=MT[db%4];meta.textContent=`${y}.${String(m).padStart(2,'0')}.${String(d).padStart(2,'0')} · ${gender}성 · ${h}시`;saju.innerHTML=pillar(hs,hb,'생시')+pillar(ds,db,'생일')+pillar(ms,mb,'생월')+pillar(ys,yb,'생년');ilgan.textContent=il[0];keyword.textContent=il[1];desc.textContent=il[2];love.textContent=`${il[0]}의 기본 성향에 ${dom} 기운이 더해져, 연애에서는 가벼운 설렘보다 오래 버틸 수 있는 신뢰를 중요하게 봅니다. 겉으로는 담담해 보여도 마음속 기준은 분명해서, 오래 갈 사람인지 아닌지를 은근히 빠르게 판단합니다.`;document.getElementById('scores').innerHTML=scores(counts);elementReading.textContent=`전체 오행 중 ${dom}(${EN[dom]}) 기운이 도드라지고, ${weak} 기운은 상대적으로 약하게 보입니다. 강한 기운은 장점으로 쓰되, 부족한 기운을 가진 사람이나 환경을 만나면 균형이 잘 맞습니다.`;partner.textContent=`당신의 연애 레벨을 올려줄 상대는 ${sp.traits[0]}입니다. 화려한 말보다 생활 속에서 안정적으로 보여주는 사람에게 마음이 열릴 가능성이 큽니다.`;mbti.textContent=sp.mbti;age.textContent=sp.age+'살';traits.innerHTML=li(sp.traits,'•');avoid.innerHTML=li(sp.avoid,'•');range.textContent=mt[0];rlabel.textContent=mt[1];rdesc.textContent=mt[2];marriage.textContent=`${mt[1]}의 흐름이 있어서 ${mt[0]} 전후로 인연운이 강하게 들어오는 구조입니다. 배우자복은 한 번에 터지기보다 신뢰를 쌓으며 점점 좋아지는 타입에 가깝습니다.`;mmbti.textContent=sp.mbti;season.textContent=sp.season;mtraits.innerHTML=li(sp.traits,'✓');warning.textContent=`${weak} 기운이 약하게 잡혀 있어서, 관계에서 부족한 부분을 상대에게만 기대하면 서운함이 커질 수 있어요. 중요한 관계일수록 참는 것보다 부드럽게 설명하는 연습이 필요합니다.`;tip.textContent=`${sp.place}처럼 자연스럽게 대화가 생기는 공간에서 인연운이 좋아요. ${sp.day}에는 약속을 너무 거창하게 잡기보다 가볍게 움직이는 편이 오히려 좋은 흐름을 만듭니다.`;place.textContent=sp.place;lucky.textContent=sp.day;celeb.innerHTML=chips(sp.celebrity);summary.textContent=`종합하면 ${il[0]}은 ${il[1]}의 결을 가진 사람이고, 인연은 편안하지만 만만하지 않은 사람 쪽으로 들어올 가능성이 큽니다. 결혼운은 서두르는 운보다 서로의 생활 리듬을 맞추며 안정되는 운에 가깝고, 좋은 상대를 만나려면 내 기준을 낮추기보다 내 속도를 부드럽게 설명하는 것이 핵심입니다.`;show('result')},650)}function reset(){show('input')}document.querySelectorAll('input').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter')analyze()}));
+(function(){
+  var HS=["갑(甲)","을(乙)","병(丙)","정(丁)","무(戊)","기(己)","경(庚)","신(辛)","임(壬)","계(癸)"];
+  var EB=["자(子)","축(丑)","인(寅)","묘(卯)","진(辰)","사(巳)","오(午)","미(未)","신(申)","유(酉)","술(戌)","해(亥)"];
+  var SE=["목","목","화","화","토","토","금","금","수","수"];
+  var BE=["수","토","목","목","토","화","화","토","금","금","토","수"];
+  var EC={"목":"wood","화":"fire","토":"earth","금":"metal","수":"water"};
+  var EN={"목":"성장과 추진력","화":"표현과 열정","토":"안정과 책임","금":"원칙과 결단","수":"지혜와 감성"};
+  var IL=[
+    ["갑목일간","리더십 + 성장 + 도전","곧은 나무처럼 하늘을 향해 자라는 기운. 리더십이 강하고 개척 정신이 뛰어나며, 한번 정한 목표는 끝까지 밀어붙이는 타입."],
+    ["을목일간","유연함 + 감성 + 인내","풀과 꽃처럼 유연하게 적응하는 기운. 감수성이 풍부하고 섬세하며, 어떤 환경에서도 살아남는 강인한 내면을 지님."],
+    ["병화일간","열정 + 카리스마 + 빛남","태양처럼 환하게 빛나는 기운. 존재 자체로 주변을 밝히고, 자신감과 추진력이 넘치며 사람들의 시선을 자연스레 끌어당기는 타입."],
+    ["정화일간","따뜻함 + 직관 + 헌신","촛불처럼 은은하게 빛나는 기운. 따뜻한 마음으로 주변을 감싸며, 예리한 직관력과 깊은 감성으로 사람의 마음을 잘 읽음."],
+    ["무토일간","믿음직함 + 안정감 + 든든한 중심축","양의 흙, 웅장한 산 같은 기운. 겉으로는 묵직하고 조용하지만, 속엔 끈기와 책임감, 인내심이 단단히 자리 잡은 타입."],
+    ["기토일간","포용력 + 실용성 + 세심함","논밭의 흙처럼 만물을 품는 기운. 포용력이 넓고 실용적이며, 세심한 배려로 주변 사람들을 편안하게 해주는 타입."],
+    ["경금일간","강인함 + 원칙 + 카리스마","단단한 쇠처럼 흔들리지 않는 기운. 원칙을 중시하고 결단력이 강하며, 한번 마음먹으면 끝까지 해내는 의지가 대단한 타입."],
+    ["신금일간","완벽주의 + 세련됨 + 예리함","보석처럼 빛나고 날카로운 기운. 미적 감각이 뛰어나고 완벽주의 성향이 있으며, 섬세하고 예리한 분석력을 지님."],
+    ["임수일간","지혜 + 자유로움 + 깊은 통찰","바다처럼 깊고 넓은 기운. 지혜롭고 자유분방하며, 유연한 사고로 어떤 상황에서도 해법을 찾아내는 능력이 있음."],
+    ["계수일간","감성 + 섬세함 + 지적 탐구","이슬비처럼 은은하고 섬세한 기운. 감성이 풍부하고 지적 호기심이 강하며, 깊이 생각하고 신중하게 행동하는 타입."]
+  ];
+  var SP=[
+    {mbti:"ENTJ / ISFP",age:"-3 ~ +2",season:"가을~겨울",traits:["목표 지향적이고 실행력 강한 사람","조용하지만 내면이 깊은 사람","예술적 감각이나 손재주 있는 사람"],avoid:["우유부단하고 결정 못 하는 사람","지나치게 의존적인 사람"],celebrity:["공유","현빈"],place:"야외 활동 장소, 스포츠 관련 공간",day:"금요일, 토요일"},
+    {mbti:"INFJ / ESTJ",age:"+1 ~ +5",season:"봄~여름",traits:["안정적이고 믿음직한 사람","지적이고 계획적인 사람","가정적이고 책임감 강한 사람"],avoid:["변덕스럽고 충동적인 사람","허세 부리는 사람"],celebrity:["이준기","김수현"],place:"도서관, 카페, 문화공간",day:"화요일, 목요일"},
+    {mbti:"INFP / ENFJ",age:"-5 ~ +1",season:"봄",traits:["감성적이고 따뜻한 사람","창의적이고 예술적인 사람","나를 이해하고 지지해주는 사람"],avoid:["냉정하고 계산적인 사람","권위적인 사람"],celebrity:["정해인","박보검"],place:"공원, 갤러리, 감성 카페",day:"일요일, 수요일"},
+    {mbti:"ISTP / ENTP",age:"-2 ~ +4",season:"여름",traits:["실용적이고 행동력 있는 사람","유머 감각 있는 사람","나를 편안하게 해주는 사람"],avoid:["감정 표현 전혀 없는 사람","무책임한 사람"],celebrity:["송중기","이도현"],place:"활기찬 시장, 야외 공간",day:"월요일, 금요일"},
+    {mbti:"ISTJ / ESTP",age:"-1 ~ +3",season:"가을",traits:["돈·일·현실 문제에 강한 현실 밀착형","웬만한 일엔 동요 없이 지켜주는 보호자 같은 사람","말보다 행동으로 표현하는 실천형"],avoid:["산만하고 중심 없는 사람","감정 기복 심한 사람"],celebrity:["최지우","김혜수","박보영"],place:"고급 레스토랑, 자연 속 조용한 공간",day:"토요일, 화요일"},
+    {mbti:"ENFP / ISFJ",age:"0 ~ +4",season:"봄~가을",traits:["유쾌하고 에너지 넘치는 사람","세심하고 배려심 깊은 사람","성실하게 가정을 꾸려나가는 사람"],avoid:["이기적이고 배려 없는 사람","거짓말 잘 하는 사람"],celebrity:["아이유","신민아"],place:"따뜻한 분위기 카페, 가정적인 공간",day:"수요일, 일요일"},
+    {mbti:"INTJ / ESFP",age:"-3 ~ +1",season:"겨울",traits:["지적이고 원칙 있는 사람","활발하고 사교적인 사람","인생 목표가 뚜렷한 사람"],avoid:["무원칙하고 게으른 사람","지나치게 감정적인 사람"],celebrity:["김태리","전지현"],place:"세련된 도심, 고급 공간",day:"목요일, 토요일"},
+    {mbti:"INFJ / ESFJ",age:"+2 ~ +5",season:"여름",traits:["감각적이고 미적 안목 있는 사람","따뜻하고 사교적인 사람","나의 완벽주의를 이해해주는 사람"],avoid:["지저분하고 무신경한 사람","자기 관리 안 하는 사람"],celebrity:["손예진","유인나"],place:"갤러리, 세련된 공간",day:"금요일, 화요일"},
+    {mbti:"ENFP / INTJ",age:"-4 ~ +2",season:"봄~여름",traits:["자유롭고 개방적인 사람","지적이고 깊이 있는 대화 가능한 사람","나의 독립성을 존중해주는 사람"],avoid:["통제하려는 사람","좁은 시야를 가진 사람"],celebrity:["강하늘","박서준"],place:"여행지, 바다, 카페",day:"월요일, 목요일"},
+    {mbti:"ENFJ / INTP",age:"+1 ~ +3",season:"겨울~봄",traits:["감성적이고 지적인 사람","나를 깊이 이해해주는 사람","함께 성장할 수 있는 사람"],avoid:["감수성 없는 사람","표면적인 관계만 원하는 사람"],celebrity:["류준열","최우식"],place:"서점, 조용한 카페, 미술관",day:"수요일, 금요일"}
+  ];
+  var MT=[
+    ["24~27세","이른 결혼운","20대 중반에 인연이 찾아오는 운. 젊은 나이에 운명적 만남이 올 수 있어."],
+    ["28~31세","황금 결혼운","사회적으로 자리 잡으면서 자연스럽게 인연도 찾아오는 최적의 시기."],
+    ["32~35세","성숙한 결혼운","스스로 성장한 후 진짜 맞는 사람을 만나는 타입. 서두르지 않아도 돼."],
+    ["36세 이후","늦지만 확실한 결혼운","늦게 오는 인연이 더 깊고 오래가. 기다린 만큼 값진 만남이 찾아와."]
+  ];
+  var gender="여";
+  function el(id){return document.getElementById(id);}
+  function mod(n,m){return ((n%m)+m)%m;}
+  function validDate(y,m,d){var x=new Date(y,m-1,d);return x.getFullYear()===y&&x.getMonth()===m-1&&x.getDate()===d;}
+  function dayNo(y,m,d){return Math.floor(new Date(y,m-1,d,12).getTime()/86400000)+25568;}
+  function build(y,m,d,h){
+    var ys=mod(y-4,10), yb=mod(y-4,12);
+    var ms=mod([0,2,4,6,8,0,2,4,6,8][ys]+m-1,10), mb=mod(m+1,12);
+    var ds=mod(dayNo(y,m,d),10), db=mod(dayNo(y,m,d),12);
+    var hb=mod(Math.floor((h+1)/2),12), hs=mod((ds%5)*2+hb,10);
+    return {ys:ys,yb:yb,ms:ms,mb:mb,ds:ds,db:db,hs:hs,hb:hb};
+  }
+  function show(id){["inputScreen","loadingScreen","resultScreen"].forEach(function(x){el(x).classList.add("hidden")}); el(id).classList.remove("hidden"); window.scrollTo(0,0);}
+  function error(msg){el("errorBox").textContent=msg;el("errorBox").classList.remove("hidden");}
+  function clearError(){el("errorBox").textContent="";el("errorBox").classList.add("hidden");}
+  function pillar(si,bi,label){var se=SE[si],be=BE[bi];return '<div class="pillar"><div class="pillabel">'+label+'</div><div class="box '+EC[se]+'"><b>'+HS[si].slice(0,1)+'</b><small>'+se+'</small></div><div class="box '+EC[be]+'"><b>'+EB[bi].slice(0,1)+'</b><small>'+be+'</small></div></div>';}
+  function list(items,prefix){return items.map(function(x){return "<li>"+prefix+" "+x+"</li>";}).join("");}
+  function chips(items){return items.map(function(x){return '<span class="chip">'+x+"</span>";}).join("");}
+  function scores(counts){return Object.keys(counts).map(function(k){var n=counts[k],w=Math.min(100,18+n*18);return '<div class="score"><div style="font-size:12px;font-weight:900;color:#4b5563">'+k+'</div><div class="bar"><div class="fill" style="width:'+w+'%"></div></div><div style="font-size:12px;font-weight:900;color:#7c3aed;text-align:right">'+n+'</div></div>';}).join("");}
+  function setGender(g){
+    gender=g;
+    el("btnFemale").classList.toggle("on",g==="여");
+    el("btnMale").classList.toggle("on",g==="남");
+  }
+  function analyze(){
+    clearError();
+    var y=Number(el("yearInput").value), m=Number(el("monthInput").value), d=Number(el("dayInput").value), hText=el("hourInput").value, h=Number(hText);
+    if(!y||!m||!d||hText===""){error("생년월일과 태어난 시간을 입력해주세요.");return;}
+    if(y<1920||y>2026){error("출생연도는 1920~2026 사이로 입력해주세요.");return;}
+    if(m<1||m>12){error("출생월은 1~12 사이로 입력해주세요.");return;}
+    if(h<0||h>23){error("태어난 시각은 0~23 사이로 입력해주세요.");return;}
+    if(!validDate(y,m,d)){error("존재하지 않는 날짜입니다.");return;}
+    show("loadingScreen");
+    setTimeout(function(){
+      var s=build(y,m,d,h);
+      var counts={"목":0,"화":0,"토":0,"금":0,"수":0};
+      [s.ys,s.ms,s.ds,s.hs].forEach(function(i){counts[SE[i]]++;});
+      [s.yb,s.mb,s.db,s.hb].forEach(function(i){counts[BE[i]]++;});
+      var vals=Object.values(counts), max=Math.max.apply(null,vals), min=Math.min.apply(null,vals);
+      var dom=Object.keys(counts).filter(function(k){return counts[k]===max;})[0];
+      var weak=Object.keys(counts).filter(function(k){return counts[k]===min;})[0];
+      var il=IL[s.ds], sp=SP[s.ds], mt=MT[s.db%4];
+
+      el("meta").textContent=y+"."+String(m).padStart(2,"0")+"."+String(d).padStart(2,"0")+" · "+gender+"성 · "+h+"시";
+      el("sajuGrid").innerHTML=pillar(s.hs,s.hb,"생시")+pillar(s.ds,s.db,"생일")+pillar(s.ms,s.mb,"생월")+pillar(s.ys,s.yb,"생년");
+      el("ilganName").textContent=il[0]; el("ilganKeyword").textContent=il[1]; el("ilganDesc").textContent=il[2];
+      el("loveReading").textContent=il[0]+"의 기본 성향에 "+dom+" 기운이 더해져, 연애에서는 가벼운 설렘보다 오래 버틸 수 있는 신뢰를 중요하게 봅니다. 겉으로는 담담해 보여도 마음속 기준은 분명해서, 오래 갈 사람인지 아닌지를 은근히 빠르게 판단합니다.";
+      el("scoreGrid").innerHTML=scores(counts);
+      el("elementReading").textContent="전체 오행 중 "+dom+"("+EN[dom]+") 기운이 도드라지고, "+weak+" 기운은 상대적으로 약하게 보입니다. 강한 기운은 장점으로 쓰되, 부족한 기운을 가진 사람이나 환경을 만나면 균형이 잘 맞습니다.";
+      el("partnerReading").textContent="당신의 연애 레벨을 올려줄 상대는 "+sp.traits[0]+"입니다. 화려한 말보다 생활 속에서 안정적으로 보여주는 사람에게 마음이 열릴 가능성이 큽니다.";
+      el("mbti").textContent=sp.mbti; el("age").textContent=sp.age+"살"; el("traits").innerHTML=list(sp.traits,"•"); el("avoid").innerHTML=list(sp.avoid,"•");
+      el("timingRange").textContent=mt[0]; el("timingLabel").textContent=mt[1]; el("timingDesc").textContent=mt[2];
+      el("marriageReading").textContent=mt[1]+"의 흐름이 있어서 "+mt[0]+" 전후로 인연운이 강하게 들어오는 구조입니다. 배우자복은 한 번에 터지기보다 신뢰를 쌓으며 점점 좋아지는 타입에 가깝습니다.";
+      el("marriageMbti").textContent=sp.mbti; el("season").textContent=sp.season; el("marriageTraits").innerHTML=list(sp.traits,"✓");
+      el("warningReading").textContent=weak+" 기운이 약하게 잡혀 있어서, 관계에서 부족한 부분을 상대에게만 기대하면 서운함이 커질 수 있어요. 중요한 관계일수록 참는 것보다 부드럽게 설명하는 연습이 필요합니다.";
+      el("tipReading").textContent=sp.place+"처럼 자연스럽게 대화가 생기는 공간에서 인연운이 좋아요. "+sp.day+"에는 약속을 너무 거창하게 잡기보다 가볍게 움직이는 편이 오히려 좋은 흐름을 만듭니다.";
+      el("luckyPlace").textContent=sp.place; el("luckyDay").textContent=sp.day; el("celeb").innerHTML=chips(sp.celebrity);
+      el("summaryReading").textContent="종합하면 "+il[0]+"은 "+il[1]+"의 결을 가진 사람이고, 인연은 편안하지만 만만하지 않은 사람 쪽으로 들어올 가능성이 큽니다. 결혼운은 서두르는 운보다 서로의 생활 리듬을 맞추며 안정되는 운에 가깝고, 좋은 상대를 만나려면 내 기준을 낮추기보다 내 속도를 부드럽게 설명하는 것이 핵심입니다.";
+      show("resultScreen");
+    },500);
+  }
+  el("btnFemale").addEventListener("click",function(){setGender("여");});
+  el("btnMale").addEventListener("click",function(){setGender("남");});
+  el("analyzeBtn").addEventListener("click",analyze);
+  el("resetBtn").addEventListener("click",function(){show("inputScreen");});
+  ["yearInput","monthInput","dayInput","hourInput"].forEach(function(id){el(id).addEventListener("keydown",function(e){if(e.key==="Enter")analyze();});});
+})();
 </script>
 </body>
 </html>
