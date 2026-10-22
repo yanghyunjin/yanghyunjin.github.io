@@ -1,32 +1,63 @@
----
-layout: default
----
-<div id="container">
-<div id="grid" data-columns class="cols">
-    {% for post in site.posts %}
-    <div class="box" style="background-color:#{{post.color}}">
-       {% if post.img %}
-          <img class="feat-image" src={{ "/images/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}">
-       {% endif %}
-          <div class="container">
-            <h4>{{post.title}}</h4>
-            <p>{{post.description}}</p>
-             <div class="action">{{ post.date | date: '%B %d, %Y' }}<a href="{{post.url | prepend: site.baseurl}}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> 
-        </div>   
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0b">
+  <title>웜벳구조대 — 앱과 소설을 만듭니다</title>
+  <meta name="description" content="떠오르는 생각을 앱과 소설로 만듭니다. 웜벳구조대의 리더스 하이, 손편지함과 그 안의 이야기들.">
+  <meta property="og:title" content="웜벳구조대">
+  <meta property="og:description" content="떠오르는 생각을 앱과 소설로 만듭니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://yanghyunjin.github.io/assets/social-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 바로가기</a>
+  <div class="page">
+    <main id="main">
+      <section class="projects" aria-labelledby="projects-title">
+        <h1 class="sr-only" id="projects-title">웜벳구조대 프로젝트</h1>
+        <a class="project-link" href="readers-high.html" aria-label="리더스 하이 프로젝트 소개">
+          <span class="project-number">#001</span><span class="project-english">READERS HIGH</span><span class="project-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="project-link" href="handletter-box.html" aria-label="손편지함 프로젝트 소개">
+          <span class="project-number">#002</span><span class="project-english">HANDLETTER BOX</span><span class="project-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="project-pending" aria-label="프로젝트 003, 미공개">
+          <span class="project-number">#003</span><span class="pending-questions" aria-hidden="true">????????????????????????????????????????????????????????????????????????????????????????????????????</span>
+        </div>
+        <div class="project-pending" aria-label="프로젝트 004, 미공개">
+          <span class="project-number">#004</span><span class="pending-questions" aria-hidden="true">????????????????????????????????????????????????????????????????????????????????????????????????????</span>
+        </div>
+        <div class="project-pending" aria-label="프로젝트 005, 미공개">
+          <span class="project-number">#005</span><span class="pending-questions" aria-hidden="true">????????????????????????????????????????????????????????????????????????????????????????????????????</span>
+        </div>
+        <div class="project-pending" aria-label="프로젝트 006, 미공개">
+          <span class="project-number">#006</span><span class="pending-questions" aria-hidden="true">????????????????????????????????????????????????????????????????????????????????????????????????????</span>
+        </div>
+        <div class="project-pending" aria-label="프로젝트 007, 미공개">
+          <span class="project-number">#007</span><span class="pending-questions" aria-hidden="true">????????????????????????????????????????????????????????????????????????????????????????????????????</span>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+    <div class="identity">
+      <a class="wordmark" href="#" aria-label="웜벳구조대 처음으로">WOMBAT RESCUE<span>웜벳구조대</span></a>
+      <p class="intro">떠오르는 생각을 앱과 소설로 만듭니다.</p>
     </div>
-   {% endfor %}
-
-</div>
-</div>
-
-<script src="{{site.baseurl}}/js/salvattore.min.js"></script>
-
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107272919-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
-
-  gtag('config', 'UA-107272919-1');
-</script>
+      <nav aria-label="채널과 문의">
+        <a href="https://www.instagram.com/wombat.rescue/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+        <a href="https://www.threads.com/@wombat.rescue" target="_blank" rel="noopener noreferrer">THREADS ↗</a>
+        <a href="https://brunch.co.kr/@yangrookie" target="_blank" rel="noopener noreferrer">BRUNCH ↗</a>
+        <a href="https://brunch.co.kr/@yangrookie/propose" target="_blank" rel="noopener noreferrer">문의 ↗</a>
+      </nav>
+      <span class="copyright">© 2026 WOMBAT RESCUE</span>
+    </footer>
+  </div>
+</body>
+</html>
